@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "UXSS",
+  "version": "1.0",
+  "description": "UXSS by extension",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": []
+}
